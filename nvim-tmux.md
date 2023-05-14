@@ -13,53 +13,91 @@
 
 - ### NORMAL:
 
-    - Ctrl + a = Iterate the number under the cursor
 
-	- Ctrl + d = Goes half a page down / forward | Baja media página
-	
-	- Ctrl + u = Goes half a page up | Sube media página
-	 
-	- Ctrl + f = Goes a full page down / forward | Baja una página entera
-	
-	- Ctrl + b = Goes a full page up / backward | Baja una página entera
+    - h, j, k & l = move left, down, up and right character by character (can be used with motions)
 
-    - Ctrl + g = Gets info about the file (name, size, route to it)
+    - d = "dd" deletes a line, but it can be combined with "t", "f", and "a" / "i"
 
+    - D = Deletes from where the cursor is to the end of the line
+
+    - c = "cc" changes an entire line (drops you in Insert mode), works like "d"
+
+    - C = Changes from where the cursor is to the end of the line
 
 	- x = The better way to delete characters
+
+    - v = Puts you in visual mode, usually combined with motions
+
+    - V = Puts you in visual mode, but selects by lines instead of words
 	
-    - = = Indents the current line correctly
+    - r = Replaces the letter the cursor is on with the letter you press after
+
+    - R = Puts you into replace mode, which allows you to overwrite (try it out)
+
+
+    - \<\< = Indent an entire line backwards
+
+    - \>\> = Indent an entire line forwards
+
+    - \< = Can be combined with a selection / motion to indent backwards x number of lines
+
+    - \> = Can be combined with a selection / motion to indent x number of lines
+
+    - = = "==" indents the current line correctly
 
     - =ap = Indents the whole paragraph & surrounding whitespace
 
-    - \> = Can be combined with a selection or motion to indent x number of lines
-    
-    - \< = Can be combined with a selection or motion to backwards-indent lines
 
-	- b & w = Jump backwards and forwards to the next word / different format of text (no need for space)
-	
-	- W = Jump to the next space-separated text
-	
-	- e = Go to the ending of a word 
-	
-	- gg = Go to the first line
-	
-	- G = Go to the last line
-	
-	- \<number>gg / \<number>G = Go to line \<number>
-	
-	- p = Pastes either the last thing yanked or deleted
+	- p = Pastes either the last thing yanked or deleted in the line above the cursor
 
+    - P = Pastes either the last thing yanked or deleted in the line above the cursor
 
 	- d$ = deletes from the cursor to the end of the line - 
 	
 	- 0 = deletes from the beginning of the line to the cursor
+
+
+    - \<number>gg / \<number>G = Go to line \<number>
 	
+    - b & w = Go to the beginning & ending of a word / different text format (counts space as a word)
+
+    - W = Jump to the next space-separated text
+
+    - e = Go to the ending of a word 
+
+    - gg = Go to the first line
+
+    - G = Go to the last line
+
 	- $ = Go to the end of the line
 	
 	- _ = Go to the start of the line
 	
 	- 0 = Go to the beginning character of the line
+
+    - ^ = Go to the beginning word of the line
+
+
+    - \* = Searches for other instances of the word
+
+    - ; = When using t + <character>, go to the next instance of the specified character
+
+
+    - zz to center the page based on the cursor's position
+
+
+    - Ctrl + a = Iterate the number under the cursor
+
+    - Ctrl + d = Goes half a page down / forward | Baja media página
+
+    - Ctrl + u = Goes half a page up | Sube media página
+
+    - Ctrl + f = Goes a full page down / forward | Baja una página entera
+
+    - Ctrl + b = Goes a full page up / backward | Baja una página entera
+
+    - Ctrl + g = Gets info about the file (name, size, route to it)
+
 
 
 - #### MOTION COMBINATIONS
@@ -121,10 +159,12 @@
 
 ### VISUAL:
 
+
+- y = "yy" yanks an entire line, but can be combined with a motion ( e.g "yiw" )
+
 - % = Used like, for example, Vf(%, it selects from the { to its matching }
     - It allows you to jump between sets of characters ( {}, (), ' ', etc. )
 
-- V = Selects current line (can overwrite it by pasting it)
 - VD = Visually delete a whole line, technically faster than double tapping "d"
 - VY = Faster way to do the same as 'yy'
 
@@ -133,7 +173,7 @@
 - ya<delimiter> = Yanks with the same selection as va would do
 - viw = Selects in visual mode the whole word, doesn't care about positioning
 - viW = Same as viw but selects all text until there are whitespaces
-- o = Transfers your cursor to the top or bottom of the current visual selection 
+- o = Alternates your cursor between the top / bottom of the current visual selection 
 - vap & dap = They select / delete paragraphs AND the contiguous whitespace
 - vip & dip = They select / delete only the insides of the paragraphs
 
