@@ -29,7 +29,7 @@
     - v = Puts you in visual mode, usually combined with motions
 
     - V = Puts you in visual mode, but selects by lines instead of words
-	
+    	
     - r = Replaces the letter the cursor is on with the letter you press after
 
     - R = Puts you into replace mode, which allows you to overwrite (try it out)
@@ -53,12 +53,12 @@
     - P = Pastes either the last thing yanked or deleted in the line above the cursor
 
 	- d$ = deletes from the cursor to the end of the line - 
-	
+    	
 	- 0 = deletes from the beginning of the line to the cursor
 
 
     - \<number>gg / \<number>G = Go to line \<number>
-	
+    	
     - b & w = Go to the beginning & ending of a word / different text format (counts space as a word)
 
     - W = Jump to the next space-separated text
@@ -70,9 +70,9 @@
     - G = Go to the last line
 
 	- $ = Go to the end of the line
-	
+    	
 	- _ = Go to the start of the line
-	
+    	
 	- 0 = Go to the beginning character of the line
 
     - ^ = Go to the beginning word of the line
@@ -122,25 +122,25 @@
 	- dF\<char\> deletes From the cursor to the previous specified character in the line
 	- dt\<char\> deletes from the cursor To right before the next specified character in the line
 	- dT\<char\> deletes from the cursor To right after the previous specified character in the line 
-	
+    	
 	- vf\<char\> selects From the cursor to the next specified character in the line 
 	- vF\<char\> selects From the cursor to the previous specified character in the line
 	- vt\<char\> selects from the cursor To right before the next specified character in the line
 	- vT\<char\> selects from the cursor To right after the previous specified character in the line 
-	
-	
+    	
+    	
 	- yf\<char\> yanks From the cursor to the next specified character in the line 
 	- yF\<char\> yanks From the cursor to the previous specified character in the line
 	- yt\<char\> yanks from the cursor To right before the next specified character in the line
 	- yT\<char\> yanks from the cursor To right after the previous specified character in the line 
-	
-	
+    	
+    	
 	- cf\<char\> changes From the cursor to the next specified character in the line 
 	- cF\<char\> changes From the cursor to the previous specified character in the line
 	- ct\<char\> changes from the cursor To right before the next specified character in the line
 	- cT\<char\> changes from the cursor To right after the previous specified character in the line 
-	
-	
+    	
+    	
 	- pf\<char\> pastes From the cursor to the next specified character in the line 
 	- pF\<char\> pastes From the cursor to the previous specified character in the line
 	- pt\<char\> pastes from the cursor To right before the next specified character in the line
@@ -151,10 +151,16 @@
 
 - i = Enter insert mode right on the cursor
 	- I = Enter insert mode, but position the cursor at the beginning of the line
+    
 - a = Enter insert mode, but right after the cursor
 	- A = Enter insert mode, but right over the end of the line
+    
 - o = Enter insert mode, but in a new line below the one we're in
 	- O = Enter insert mode, but in a new line above the one we're in
+    
+- Ctrl + P = Match string with next similar string
+    
+- Ctrl + N = Match string with previous similar string
  
 
 ### VISUAL:
