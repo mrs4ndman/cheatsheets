@@ -48,15 +48,21 @@
     - =ap = Indents the whole paragraph & surrounding whitespace
 
 
-	- p = Pastes either the last thing yanked or deleted in the line above the cursor
+    - p = Pastes either the last thing yanked or deleted in the line above the cursor
 
     - P = Pastes either the last thing yanked or deleted in the line above the cursor
 
-	- d$ = deletes from the cursor to the end of the line - 
+    - d$ = deletes from the cursor to the end of the line - 
     	
-	- 0 = deletes from the beginning of the line to the cursor
+    - 0 = deletes from the beginning of the line to the cursor
 
 
+    - L = Go to the bottom of the currently visible text    	
+
+    - H = Go to the top of the currently visible text   	
+
+    - M = Go to the middle of the currently visble text
+    	
     - \<number>gg / \<number>G = Go to line \<number>
     	
     - b & w = Go to the beginning & ending of a word / different text format (counts space as a word)
@@ -69,11 +75,11 @@
 
     - G = Go to the last line
 
-	- $ = Go to the end of the line
-    	
-	- _ = Go to the start of the line
-    	
-	- 0 = Go to the beginning character of the line
+    - $ = Go to the end of the line
+
+    - _ = Go to the start of the line
+
+    - 0 = Go to the beginning character of the line
 
     - ^ = Go to the beginning word of the line
 
@@ -103,7 +109,7 @@
 - #### MOTION COMBINATIONS
 
 	- f\<char\> = Goes forward to the specified character in the line
-		- Can be combined with x to eliminate certain characters
+- Can be combined with x to eliminate certain characters
 			 
 	- t\<char\> = Jumps to right before the specified character in the line (e.g. > )
 		- Used with t\<char\> or f\<char\>
