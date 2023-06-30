@@ -3,9 +3,9 @@
 ## Introducción
 
 ### Grep recibe su nombre (acrónimo) de las siguientes palabras:
-    - g → Global
-    - re → Regular expression (expresión RegEx)
-    - p → Print: Ya que es una herramienta de la línea de comandos, imprime los resultados
+- g → Global
+- re → Regular expression (expresión RegEx)
+- p → Print: Ya que es una herramienta de la línea de comandos, imprime los resultados
 
 ### Opciones de uso:
 `grep` (para iniciar el comando)
