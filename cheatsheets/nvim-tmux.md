@@ -5,164 +5,192 @@
 
 ## VIM / NVIM base modal motions & keybinds
 
-- ### COMMAND MODE:
+#### Actions → keys that, when pressed twice, have an effect on text editing. Can be combined with motions to get a broader range of action
+#### Motions → keys that, when pressed, can be stacked together with actions to modify text in greater ways
+#### Mode → The status in which the editor and keys operate. Can be changed by keybinds, and have different purposes
 
-    - :sav <filename> = Saves to filename & switches the buffer to <filename> 
+### Modal keys
+#### Visual mode
+- <kbd>v</kbd> → Puts you in visual mode, usually combined with motions
+<br> 
+- <kbd>V</kbd> → Puts you in visual mode, but selects by lines instead of words
+<br> 
+#### Insert mode
+- <kbd>i</kbd> = Enter insert mode to the left on the cursor
+- <kbd>I</kbd> = Enter insert mode at the beginning of the line
+<br> 
+- <kbd>a</kbd> = Enter insert mode, but to the right of the cursor
+- <kbd>A</kbd> = Enter insert mode at the end of the line
+<br> 
+- <kbd>o</kbd> = Enter insert mode, but in a new line below
+- <kbd>O</kbd> = Enter insert mode, but in a new line above
+<br> 
 
+#### Command mode:
+- <kbd>:</kbd> = Enter command mode
+- `:sav <filename>` = Enters command mode and saves to `filename` & switches the buffer to it
+<br> 
 
+### NORMAL:
 
-- ### NORMAL:
+#### Actions by themselves, motions when combined with specific keys
+- <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd> & <kbd>l</kbd> = move left, down, up and right character by character (can be used with motions)
 
+- <kbd>$</kbd> = Go to the end of the line
+- <kbd>_</kbd> = Go to the start of the line
+<br>
+- <kbd>0</kbd> = Go to the beginning character of the line
+- <kbd>^</kbd> = Go to the beginning word of the line
+<br>
 
-    - h, j, k & l = move left, down, up and right character by character (can be used with motions)
+#### Available motions
+- <kbd>=ap</kbd> = Indents the whole paragraph & surrounding whitespace
+<br>
+- <kbd>d$</kbd> = deletes from the cursor to the end of the line
+<br>
 
-    - d = "dd" deletes a line, but it can be combined with "t", "f", and "a" / "i"
+#### Available actions
+##### Basic text manipulation
+- <kbd>d</kbd> = "dd" deletes a line, but it can be combined with "t", "f", and "a" / "i"
 
-    - D = Deletes from where the cursor is to the end of the line
+- <kbd>D</kbd> = Deletes from where the cursor is to the end of the line
+<br>
 
-    - c = "cc" changes an entire line (drops you in Insert mode), works like "d"
+- <kbd>c</kbd> = "cc" changes an entire line (drops you in Insert mode), works like "d"
+- <kbd>C</kbd> = Changes from where the cursor is to the end of the line
+<br>
 
-    - C = Changes from where the cursor is to the end of the line
+- <kbd>x</kbd> = The better way to delete characters
+<br>
 
-	- x = The better way to delete characters
+- <kbd>r</kbd> = Replaces the letter the cursor is on with the letter you press after
+<br>
 
-    - v = Puts you in visual mode, usually combined with motions
+- <kbd>p</kbd> = Pastes either the last thing yanked or deleted in the line above the cursor
 
-    - V = Puts you in visual mode, but selects by lines instead of words
-    	
-    - r = Replaces the letter the cursor is on with the letter you press after
+- <kbd>P</kbd> = Pastes either the last thing yanked or deleted in the line above the cursor
+<br>
 
-    - R = Puts you into replace mode, which allows you to overwrite (try it out)
+- <kbd>d$</kbd> = deletes from the cursor to the end of the line
 
-
-    - \<\< = Indent an entire line backwards
-
-    - \>\> = Indent an entire line forwards
-
-    - \< = Can be combined with a selection / motion to indent backwards x number of lines
-
-    - \> = Can be combined with a selection / motion to indent x number of lines
-
-    - = = "==" indents the current line correctly
-
-    - =ap = Indents the whole paragraph & surrounding whitespace
-
-
-    - p = Pastes either the last thing yanked or deleted in the line above the cursor
-
-    - P = Pastes either the last thing yanked or deleted in the line above the cursor
-
-    - d$ = deletes from the cursor to the end of the line - 
-    	
-    - 0 = deletes from the beginning of the line to the cursor
-
-
-    - L = Go to the bottom of the currently visible text    	
-
-    - H = Go to the top of the currently visible text   	
-
-    - M = Go to the middle of the currently visble text
-    	
-    - \<number>gg / \<number>G = Go to line \<number>
-    	
-    - b & w = Go to the beginning & ending of a word / different text format (counts space as a word)
-
-    - W = Jump to the next space-separated text
-
-    - e = Go to the ending of a word 
-
-    - gg = Go to the first line
-
-    - G = Go to the last line
-
-    - $ = Go to the end of the line
-
-    - _ = Go to the start of the line
-
-    - 0 = Go to the beginning character of the line
-
-    - ^ = Go to the beginning word of the line
+- <kbd>0</kbd> = deletes from the beginning of the line to the cursor
+<br>
 
 
-    - \* = Searches for other instances of the word
+##### Indentation management
+- <kbd><</kbd> = Can be combined with a selection / motion to indent backwards x number of lines
+- <kbd>></kbd> = Can be combined with a selection / motion to indent x number of lines
+<br>
 
-    - ; = When using t + <character>, go to the next instance of the specified character
+- <kbd><<</kbd> = Indent an entire line backwards
+- <kbd>>></kbd> = Indent an entire line forwards
+<br>
+
+- <kbd>=</kbd> = Motion target, "\=\=" indents the current line correctly
+- <kbd>=ap</kbd> = Indents the whole paragraph & surrounding whitespace
+<br>
+
+##### Viewspace navigation
+- <kbd>L</kbd> = Go to the bottom of the currently visible text    	
+
+- <kbd>H</kbd> = Go to the top of the currently visible text   	
+
+- <kbd>M</kbd> = Go to the middle of the currently visble text
+<br>
+
+##### Line navigation
+- <kbd>gg</kbd> = Go to the first line
+
+- <kbd>G</kbd> = Go to the last line
+
+- <kbd>Xgg</kbd> / <kbd>XG</kbd> = Go to line X
+<br>
+
+##### Word manipulation
+- <kbd>b</kbd> & <kbd>w</kbd> = Go to the beginning & ending of a word / different text format (counts space as a word)
+
+- <kbd>W</kbd> = Jump to the next space-separated text
+
+- <kbd>e</kbd> = Go to the ending of a word 
+<br>
+
+- <kbd>`*`</kbd> = Searches for other instances of the word
+
+- <kbd>zz</kbd> to center the page based on the cursor's position
+<br>
+
+- <kbd>Ctrl + a</kbd> = Iterate the number under the cursor
+
+- <kbd>Ctrl + d</kbd> = Goes half a page down / forward | Baja media página
+
+- <kbd>Ctrl + u</kbd> = Goes half a page up | Sube media página
+
+- <kbd>Ctrl + f</kbd> = Goes a full page down / forward | Baja una página entera
+
+- <kbd>Ctrl + b</kbd> = Goes a full page up / backward | Baja una página entera
+
+- <kbd>Ctrl + g</kbd> = Gets info about the file (name, size, route to it)
 
 
-    - zz to center the page based on the cursor's position
+
+#### MOTION COMBINATIONS
+
+- <kbd>f\<char\></kbd> = Goes forward to the specified character in the line
+	- Can be combined with x to eliminate certain characters
+
+- <kbd>t\<char\></kbd> = Jumps to right before the specified character in the line (e.g. > )
+	- Used with t\<char\> or f\<char\>
+
+- <kbd>F\<char\></kbd> = Goes backwards to the specified character in the line (e.g. <) 
+
+- <kbd>T\<char\></kbd> = Jumps to right after the previous specified character in the line (e.g. = ) 
+	- T\<char\> is a mirror of t\<char\>, same with f \& F
+	- Used with T\<char\> or F\<char\>
+
+- <kbd>,</kbd> = Go to the previous instance (but right before it)
+	- <kbd>;</kbd> = Go to the next instance (but right before it)
+
+##### Both t / T \& f / F can be used with d, c, y, v (visual mode) \& p
+
+- <kbd>df\<char\></kbd> deletes From the cursor to the next specified character in the line 
+- <kbd>dF\<char\></kbd> deletes From the cursor to the previous specified character in the line
+- <kbd>dt\<char\></kbd> deletes from the cursor To right before the next specified character in the line
+- <kbd>dT\<char\></kbd> deletes from the cursor To right after the previous specified character in the line 
+
+- <kbd>vf\<char\></kbd> selects [F]rom the cursor to the next specified character in the line 
+- <kbd>vF\<char\></kbd> selects From the cursor to the previous specified character in the line
+- <kbd>vt\<char\></kbd> selects from the cursor To right before the next specified character in the line
+- <kbd>vT\<char\></kbd> selects from the cursor To right after the previous specified character in the line 
 
 
-    - Ctrl + a = Iterate the number under the cursor
-
-    - Ctrl + d = Goes half a page down / forward | Baja media página
-
-    - Ctrl + u = Goes half a page up | Sube media página
-
-    - Ctrl + f = Goes a full page down / forward | Baja una página entera
-
-    - Ctrl + b = Goes a full page up / backward | Baja una página entera
-
-    - Ctrl + g = Gets info about the file (name, size, route to it)
+- <kbd>yf\<char\></kbd> yanks From the cursor to the next specified character in the line 
+- <kbd>yF\<char\></kbd> yanks From the cursor to the previous specified character in the line
+- <kbd>yt\<char\></kbd> yanks from the cursor To right before the next specified character in the line
+- <kbd>yT\<char\></kbd> yanks from the cursor To right after the previous specified character in the line 
 
 
+- <kbd>cf\<char\></kbd> changes From the cursor to the next specified character in the line 
+- <kbd>cF\<char\></kbd> changes From the cursor to the previous specified character in the line
+- <kbd>ct\<char\></kbd> changes from the cursor To right before the next specified character in the line
+- <kbd>cT\<char\></kbd> changes from the cursor To right after the previous specified character in the line 
 
-- #### MOTION COMBINATIONS
 
-	- f\<char\> = Goes forward to the specified character in the line
-- Can be combined with x to eliminate certain characters
-			 
-	- t\<char\> = Jumps to right before the specified character in the line (e.g. > )
-		- Used with t\<char\> or f\<char\>
-			- , = Go to the previous instance (but right before it)
-			- ; = Go to the next instance (but right before it)
-			
-	- F\<char\> = Goes backwards to the specified character in the line (e.g. <) 
-		
-	- T\<char\> = Jumps to right after the previous specified character in the line (e.g. = ) 
-		- T\<char\> is a mirror of t\<char\>, same with f \& F
-		- Used with T\<char\> or F\<char\>
-
-- ##### Both t / T \& f / F can be used with d, c, y, v (visual mode) \& p
-
-	- df\<char\> deletes From the cursor to the next specified character in the line 
-	- dF\<char\> deletes From the cursor to the previous specified character in the line
-	- dt\<char\> deletes from the cursor To right before the next specified character in the line
-	- dT\<char\> deletes from the cursor To right after the previous specified character in the line 
-    	
-	- vf\<char\> selects From the cursor to the next specified character in the line 
-	- vF\<char\> selects From the cursor to the previous specified character in the line
-	- vt\<char\> selects from the cursor To right before the next specified character in the line
-	- vT\<char\> selects from the cursor To right after the previous specified character in the line 
-    	
-    	
-	- yf\<char\> yanks From the cursor to the next specified character in the line 
-	- yF\<char\> yanks From the cursor to the previous specified character in the line
-	- yt\<char\> yanks from the cursor To right before the next specified character in the line
-	- yT\<char\> yanks from the cursor To right after the previous specified character in the line 
-    	
-    	
-	- cf\<char\> changes From the cursor to the next specified character in the line 
-	- cF\<char\> changes From the cursor to the previous specified character in the line
-	- ct\<char\> changes from the cursor To right before the next specified character in the line
-	- cT\<char\> changes from the cursor To right after the previous specified character in the line 
-    	
-    	
-	- pf\<char\> pastes From the cursor to the next specified character in the line 
-	- pF\<char\> pastes From the cursor to the previous specified character in the line
-	- pt\<char\> pastes from the cursor To right before the next specified character in the line
-	- pT\<char\> pastes from the cursor To right after the previous specified character in the line
+- <kbd>pf\<char\></kbd> pastes From the cursor to the next specified character in the line 
+- <kbd>pF\<char\></kbd> pastes From the cursor to the previous specified character in the line
+- <kbd>pt\<char\></kbd> pastes from the cursor To right before the next specified character in the line
+- <kbd>pT\<char\></kbd> pastes from the cursor To right after the previous specified character in the line
 
 
 ### INSERT:
 
-- i = Enter insert mode right on the cursor
-	- I = Enter insert mode, but position the cursor at the beginning of the line
+- <kbd>i</kbd> = Enter insert mode right on the cursor
+- <kbd>I</kbd> = Enter insert mode, but position the cursor at the beginning of the line
     
-- a = Enter insert mode, but right after the cursor
-	- A = Enter insert mode, but right over the end of the line
+- <kbd>a</kbd> = Enter insert mode, but right after the cursor
+- <kbd>A</kbd> = Enter insert mode, but right over the end of the line
     
-- o = Enter insert mode, but in a new line below the one we're in
-	- O = Enter insert mode, but in a new line above the one we're in
+- <kbd>o</kbd> = Enter insert mode, but in a new line below the one we're in
+- <kbd>O</kbd> = Enter insert mode, but in a new line above the one we're in
     
 - Ctrl + P = Match string with next similar string
     
