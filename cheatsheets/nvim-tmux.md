@@ -11,23 +11,27 @@
 
 ### Modal keys
 #### Visual mode
+
 - <kbd>v</kbd> → Puts you in visual mode, usually combined with motions
-<br> 
 - <kbd>V</kbd> → Puts you in visual mode, but selects by lines instead of words
-<br> 
+<br>
 
 #### Insert mode
+
 - <kbd>i</kbd> = Enter insert mode to the left on the cursor
 - <kbd>I</kbd> = Enter insert mode at the beginning of the line
-<br> 
+<br>
+
 - <kbd>a</kbd> = Enter insert mode, but to the right of the cursor
 - <kbd>A</kbd> = Enter insert mode at the end of the line
-<br> 
+<br>
+
 - <kbd>o</kbd> = Enter insert mode, but in a new line below
 - <kbd>O</kbd> = Enter insert mode, but in a new line above
-<br> 
+<br>
 
-#### Command mode:
+#### Command mode
+
 - <kbd>:</kbd> = Enter command mode
 - <kbd>:sav <filename></kbd> = Enters command mode and saves to `filename` & switches the buffer to it
 <br> 
@@ -47,6 +51,7 @@
 <br>
 
 #### Available motions
+
 - <kbd>=ap</kbd> = Indents the whole paragraph & surrounding whitespace
 <br>
 - <kbd>d$</kbd> = deletes from the cursor to the end of the line
