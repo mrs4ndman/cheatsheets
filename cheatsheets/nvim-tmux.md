@@ -18,46 +18,51 @@
 
 #### Insert mode
 
-- <kbd>i</kbd> = Enter insert mode to the left on the cursor
-- <kbd>I</kbd> = Enter insert mode at the beginning of the line
+- <kbd>i</kbd> → Enter insert mode to the left on the cursor
+- <kbd>I</kbd> → Enter insert mode at the beginning of the line
 <br>
 
-- <kbd>a</kbd> = Enter insert mode, but to the right of the cursor
-- <kbd>A</kbd> = Enter insert mode at the end of the line
+- <kbd>a</kbd> → Enter insert mode, but to the right of the cursor
+- <kbd>A</kbd> → Enter insert mode at the end of the line
 <br>
 
-- <kbd>o</kbd> = Enter insert mode, but in a new line below
-- <kbd>O</kbd> = Enter insert mode, but in a new line above
+- <kbd>o</kbd> → Enter insert mode, but in a new line below
+- <kbd>O</kbd> → Enter insert mode, but in a new line above
 <br>
 
 #### Command mode
 
-- <kbd>:</kbd> = Enter command mode
-- <kbd>:sav <filename></kbd> = Enters command mode and saves to `filename` & switches the buffer to it
-<br> 
+- <kbd>:</kbd> → Enter command mode
+- <kbd>:sav <filename></kbd> → Enters command mode and saves to `filename` & switches the buffer to it
+<br>
 
 ### NORMAL:
 
 #### Actions by themselves, motions when combined with specific keys
-- <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd> & <kbd>l</kbd> = move left, down, up and right character by character (can be used with motions)
+- <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd> & <kbd>l</kbd> → move left, down, up and right character by character (can be used with motions)
 <br>
 
-- <kbd>$</kbd> = Go to the end of the line
-- <kbd>\_</kbd> = Go to the start of the line
+- <kbd>$</kbd> → Go to the end of the line
+- <kbd>\_</kbd> → Go to the start of the line
 <br>
 
-- <kbd>0</kbd> = Go to the beginning character of the line
-- <kbd>^</kbd> = Go to the beginning word of the line
+- <kbd>0</kbd> → Go to the beginning character of the line
+- <kbd>^</kbd> → Go to the beginning word of the line
+<br>
+
+- <kbd>%</kbd> → Used like, for example, Vf(%, it selects from the { to its matching }
+    - It allows you to jump between sets of characters ( {}, (), ' ', etc. )
+
 <br>
 
 #### Available motions
 
-- <kbd>=ap</kbd> = Indents the whole paragraph & surrounding whitespace
-<br>
-- <kbd>d$</kbd> = deletes from the cursor to the end of the line
+- <kbd>ap</kbd> → Affects the whole paragraph & surrounding whitespace
+- <kbd>1</kbd> through <kbd>9</kbd> → Allows you to set repetition for actions and other motions
 <br>
 
 #### Available actions
+
 ##### Basic text manipulation
 - <kbd>d</kbd> = "dd" deletes a line, but it can be combined with "t", "f", and "a" / "i"
 
@@ -138,25 +143,24 @@
 - <kbd>Ctrl + b</kbd> = Goes a full page up / backward | Baja una página entera
 
 - <kbd>Ctrl + g</kbd> = Gets info about the file (name, size, route to it)
-
-
+<br>
 
 #### MOTION COMBINATIONS
 
 - <kbd>f\<char\></kbd> = Goes forward to the specified character in the line
-	- Can be combined with x to eliminate certain characters
+	- Can be chained before <kbd>x<kbd> to eliminate certain characters
+<br>
 
 - <kbd>t\<char\></kbd> = Jumps to right before the specified character in the line (e.g. > )
 	- Used with t\<char\> or f\<char\>
+<br>
 
 - <kbd>F\<char\></kbd> = Goes backwards to the specified character in the line (e.g. <) 
-
 - <kbd>T\<char\></kbd> = Jumps to right after the previous specified character in the line (e.g. = ) 
-	- T\<char\> is a mirror of t\<char\>, same with f \& F
-	- Used with T\<char\> or F\<char\>
+<br>
 
 - <kbd>,</kbd> = Go to the previous instance (but right before it)
-	- <kbd>;</kbd> = Go to the next instance (but right before it)
+- <kbd>;</kbd> = Go to the next instance (but right before it)
 
 ##### Both t / T \& f / F can be used with d, c, y, v (visual mode) \& p
 
@@ -164,54 +168,42 @@
 - <kbd>dF\<char\></kbd> deletes From the cursor to the previous specified character in the line
 - <kbd>dt\<char\></kbd> deletes from the cursor To right before the next specified character in the line
 - <kbd>dT\<char\></kbd> deletes from the cursor To right after the previous specified character in the line 
+<br>
 
 - <kbd>vf\<char\></kbd> selects [F]rom the cursor to the next specified character in the line 
 - <kbd>vF\<char\></kbd> selects From the cursor to the previous specified character in the line
 - <kbd>vt\<char\></kbd> selects from the cursor To right before the next specified character in the line
 - <kbd>vT\<char\></kbd> selects from the cursor To right after the previous specified character in the line 
-
+<br>
 
 - <kbd>yf\<char\></kbd> yanks From the cursor to the next specified character in the line 
 - <kbd>yF\<char\></kbd> yanks From the cursor to the previous specified character in the line
 - <kbd>yt\<char\></kbd> yanks from the cursor To right before the next specified character in the line
 - <kbd>yT\<char\></kbd> yanks from the cursor To right after the previous specified character in the line 
-
+<br>
 
 - <kbd>cf\<char\></kbd> changes From the cursor to the next specified character in the line 
 - <kbd>cF\<char\></kbd> changes From the cursor to the previous specified character in the line
 - <kbd>ct\<char\></kbd> changes from the cursor To right before the next specified character in the line
 - <kbd>cT\<char\></kbd> changes from the cursor To right after the previous specified character in the line 
-
+<br>
 
 - <kbd>pf\<char\></kbd> pastes From the cursor to the next specified character in the line 
 - <kbd>pF\<char\></kbd> pastes From the cursor to the previous specified character in the line
 - <kbd>pt\<char\></kbd> pastes from the cursor To right before the next specified character in the line
 - <kbd>pT\<char\></kbd> pastes from the cursor To right after the previous specified character in the line
+<br>
 
 
 ### INSERT:
-
-- <kbd>i</kbd> = Enter insert mode right on the cursor
-- <kbd>I</kbd> = Enter insert mode, but position the cursor at the beginning of the line
-    
-- <kbd>a</kbd> = Enter insert mode, but right after the cursor
-- <kbd>A</kbd> = Enter insert mode, but right over the end of the line
-    
-- <kbd>o</kbd> = Enter insert mode, but in a new line below the one we're in
-- <kbd>O</kbd> = Enter insert mode, but in a new line above the one we're in
     
 - Ctrl + P = Match string with next similar string
-    
 - Ctrl + N = Match string with previous similar string
- 
+<br>
 
 ### VISUAL:
 
-
 - y = "yy" yanks an entire line, but can be combined with a motion ( e.g "yiw" )
-
-- % = Used like, for example, Vf(%, it selects from the { to its matching }
-    - It allows you to jump between sets of characters ( {}, (), ' ', etc. )
 
 - VD = Visually delete a whole line, technically faster than double tapping "d"
 - VY = Faster way to do the same as 'yy'
