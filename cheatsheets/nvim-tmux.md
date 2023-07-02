@@ -15,6 +15,7 @@
 <br> 
 - <kbd>V</kbd> → Puts you in visual mode, but selects by lines instead of words
 <br> 
+
 #### Insert mode
 - <kbd>i</kbd> = Enter insert mode to the left on the cursor
 - <kbd>I</kbd> = Enter insert mode at the beginning of the line
@@ -28,17 +29,19 @@
 
 #### Command mode:
 - <kbd>:</kbd> = Enter command mode
-- `:sav <filename>` = Enters command mode and saves to `filename` & switches the buffer to it
+- <kbd>:sav <filename></kbd> = Enters command mode and saves to `filename` & switches the buffer to it
 <br> 
 
 ### NORMAL:
 
 #### Actions by themselves, motions when combined with specific keys
 - <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd> & <kbd>l</kbd> = move left, down, up and right character by character (can be used with motions)
+<br>
 
 - <kbd>$</kbd> = Go to the end of the line
-- <kbd>_</kbd> = Go to the start of the line
+- <kbd>\_</kbd> = Go to the start of the line
 <br>
+
 - <kbd>0</kbd> = Go to the beginning character of the line
 - <kbd>^</kbd> = Go to the beginning word of the line
 <br>
